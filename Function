@@ -1,0 +1,10 @@
+CREATE or REPLACE function CUR_DT return date IS
+BEGIN 
+	return sysdate;
+end;
+/
+select cur_dt from dual;
+or
+var x varchar2(20);
+exec :x := cur_dt;
+print x
