@@ -1,0 +1,15 @@
+DECLARE 
+V_EMPID 	employees.employee_id%TYPE ;
+V_name employees.last_name%TYPE;
+BEGIN
+V_EMPID := '&EID';
+SELECT last_name INTO V_name from EMPLOYEES where employee_id = '&V_EMPID';
+DBMS_OUTPUT.PUT_LINE('His Name ='|| V_name);
+EXCEPTION
+When NO_DATA_FOUND then
+DBMS_OUTPUT.PUT_LINE('Given input EMPID ='||V_EMPID||'Please enter a valid EMPID!');
+When OTHERS then
+DBMS_OUTPUT.PUT_LINE('Enter a valid Number...!!!!!');
+
+END;
+/
