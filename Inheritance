@@ -1,0 +1,53 @@
+import java.util.Scanner;
+class Test
+{
+	public static void main (String argd[])
+	{
+		Marks obj=new Marks();
+		obj.setName("AAYUSH BHALLA");
+		obj.setRoll(14);
+		obj.setMarks(90);
+		System.out.println(obj.getName());
+		System.out.println(obj.getRoll());
+		System.out.println(obj.getMarks());
+	}
+}
+
+class Student
+{
+	private int rollNo;
+	private String name;
+	private String collegeName;
+	
+	void setRoll(int rollNo)
+	{
+		this.rollNo=rollNo;
+	}
+	int getRoll()
+	{
+		return rollNo;
+	}
+	void setName(String name)
+	{
+		this.name=name;
+	}
+	String getName()
+	{
+		return name;
+	}
+}
+class Marks extends Student
+{
+	float marks;
+	
+	void setMarks(float marks)
+	{
+		this.marks=marks;
+	}
+	float getMarks()
+	{
+		return marks;
+	}
+}
+
+
