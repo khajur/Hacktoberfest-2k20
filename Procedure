@@ -1,0 +1,6 @@
+SET SERVEROUTPUT ON
+ CREATE OR REPLACE PROCEDURE proc1 as
+    BEGIN
+    DBMS_OUTPUT.PUT_LINE('hello from procedure...');
+    end;
+    /
