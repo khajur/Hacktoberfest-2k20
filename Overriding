@@ -1,0 +1,20 @@
+public class MethodOverriding{
+void mesg()
+	{
+		System.out.println("overriding class");
+	}
+}
+class Cse extends MethodOverriding{
+	void mesg()
+	{
+		super.mesg();
+	System.out.println("Cse class");
+	}
+}
+class Main
+{
+public static void main(String[] args){
+Cse obj=new Cse();
+obj.mesg();
+}
+}
